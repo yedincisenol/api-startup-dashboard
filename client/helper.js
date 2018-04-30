@@ -23,5 +23,5 @@ export default class Helper {
         }
 
         return urlEncoded;
-    }
+    };
 };

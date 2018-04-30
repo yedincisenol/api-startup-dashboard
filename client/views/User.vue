@@ -80,7 +80,6 @@ export default {
     getUsers() {
       app.$http.get(
         Helper.getApiEndpoint('user'), {
-          headers: Helper.getApiHeaders(),
           params: {
             page: this.$route.query.page
           }
@@ -112,9 +111,7 @@ export default {
       this.$dialog.confirm('Please confirm to continue')
         .then(() => {
             app.$http.delete(
-              Helper.getApiEndpoint('user/' + userID), {
-                headers: Helper.getApiHeaders()
-              }
+              Helper.getApiEndpoint('user/' + userID)
             ).then(r => {
               app.$toasted.show('User deleted');
               this.users.splice(index, 1);

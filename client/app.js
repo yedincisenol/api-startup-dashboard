@@ -11,6 +11,7 @@ import store from './store'
 
 import Helper from './helper';
 import Config from '../config';
+import VeeValidate from 'vee-validate';
 
 //Components
 import MenuComponent from './components/Menu';
@@ -18,11 +19,20 @@ import MenuComponent from './components/Menu';
 sync(store, router)
 
 Vue.use(VueResource);
+Vue.use(VeeValidate);
 Vue.use(VueSession);
 Vue.use(Toasted, {
   duration: 5000
 });
+
 Vue.use(VuejsDialog)
+Vue.http.interceptors.push(function(request) {
+  request.headers.set('client-id',  Config.API_CLIENT_ID);
+  request.headers.set('client-secret',  Config.API_CLIENT_SECRET);
+  if (app.$session.get('access_token')) {
+    request.headers.set('Authorization', "Bearer " + app.$session.get('access_token'));
+  }
+});
 
 Vue.toasted.register('error', {
   type: 'error',

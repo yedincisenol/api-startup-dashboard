@@ -8,12 +8,18 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <router-link class="nav-link" to="/">Home <span class="sr-only">(current)</span></router-link>
-            </li>
-            <li class="nav-item">
-                <router-link class="nav-link" to="/user">Users</router-link>
-            </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/">Home <span class="sr-only">(current)</span></router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/user">Users</router-link>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/me">Profile</router-link>
+                </li>
             </ul>
 
             <form class="form-inline my-2 my-lg-0">

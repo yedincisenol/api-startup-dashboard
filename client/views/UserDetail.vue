@@ -47,9 +47,7 @@ export default {
   methods: {
     getUser() {
       app.$http.get(
-        Helper.getApiEndpoint('user/' + this.$route.query.user_id), {
-          headers: Helper.getApiHeaders()
-        }
+        Helper.getApiEndpoint('user/' + this.$route.query.user_id)
       ).then((r) => {
         this.user = r.body.data;
         this.notFound = false;
@@ -58,13 +56,9 @@ export default {
       });
     },
     update() {
-        let headers = Helper.getApiHeaders();
-        headers["Content-Type"] = "application/x-www-form-urlencoded";
         app.$http.put(
             Helper.getApiEndpoint('user/' + this.$route.query.user_id), 
-            Helper.jsonToUrlEncoded(this.user), {
-                headers: headers,
-            }
+            this.user
         ).then((s) => {
             app.$toasted.show('User updated');
         })
