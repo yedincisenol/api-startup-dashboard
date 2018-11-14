@@ -1,5 +1,28 @@
 # api-startup-web-app
 
+#Installation with Docker
+
+Create containers
+
+```
+docker-compose  up -d
+```
+
+Customize configuration
+```
+cp config.example.js config.js
+```
+
+Install depencies
+```
+docker-compose web run dev sudo npm install
+```
+
+Create build
+```
+docker-compose exec dev bash -c "sudo npm run build"
+```
+
 This project is client for [Laravel Api Startup Projects](https://github.com/yedincisenol/laravel-api-startup).
 
 Live demo at [dashboard.api-startup.yedincisenol.com](http://dashboard.api-startup.yedincisenol.com).
