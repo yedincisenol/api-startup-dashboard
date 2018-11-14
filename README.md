@@ -23,11 +23,6 @@ Create build
 docker-compose exec dev bash -c "sudo npm run build"
 ```
 
-Copy unbuilded files
-```
-cp -r build/js build/assets/ build/css/ build/images/ dist/
-```
-
 This project is client for [Laravel Api Startup Projects](https://github.com/yedincisenol/laravel-api-startup).
 
 Live demo at [dashboard.api-startup.yedincisenol.com](http://dashboard.api-startup.yedincisenol.com).
