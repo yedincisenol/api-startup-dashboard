@@ -15,7 +15,7 @@ cp config.example.js config.js
 
 Install depencies
 ```
-docker-compose web run dev sudo npm install
+docker-compose run dev sudo npm install
 ```
 
 Create build
