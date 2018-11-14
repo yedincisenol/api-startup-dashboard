@@ -1,6 +1,6 @@
 # api-startup-web-app
 
-#Installation with Docker
+## Installation with Docker
 
 Create containers
 
@@ -26,6 +26,10 @@ docker-compose exec dev bash -c "sudo npm run build"
 This project is client for [Laravel Api Startup Projects](https://github.com/yedincisenol/laravel-api-startup).
 
 Live demo at [dashboard.api-startup.yedincisenol.com](http://dashboard.api-startup.yedincisenol.com).
+
+## Installation without Docker
+
+Install nodejs first
 
 To start:
 
