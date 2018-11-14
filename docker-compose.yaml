@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  #------------------------------------------------------------
+  # Web server - For live reload and development
+  # This environment can be used to run npm and node
+  # commands as well
+  # Credits: http://github.com/codecasts/ambientum
+  #------------------------------------------------------------
+  dev:
+    image: ambientum/node:8
+    command: npm run dev
+    volumes:
+      - .:/var/www/app
+    ports:
+      - 8093:8080
+    restart: always
+  # Testing dist on a "real" webserver
+  nginx:
+    build: ./docker/nginx
+    volumes:
+      - ./dist:/usr/share/nginx/html
+    ports:
+      - 8092:80
+    restart: always
