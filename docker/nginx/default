@@ -13,7 +13,7 @@ server {
 	location = /robots.txt  { log_not_found off; access_log off; }
 
 	location / {
-    		try_files $uri $uri/ @rewrites;}
+    		try_files $uri $uri/ @rewrites;
   	}
   	location @rewrites {
     		rewrite ^(.+)$ /index.html last;
