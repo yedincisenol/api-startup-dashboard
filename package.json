@@ -75,7 +75,7 @@
     "style-loader": "^0.13.1",
     "vue-loader": "^11.0.0",
     "vue-template-compiler": "^2.2.0",
-    "webpack": "2.2.0",
+    "webpack": "5.94.0",
     "webpack-dev-server": "^2.6.1",
     "xo": "^0.18.0"
   }
